@@ -8,14 +8,15 @@
 /**********MAIN CONTENT************/
 
 #wrapper {
-  width: 50%;
-  margin-left: 20px;
+  width: 100%; /* Utilisez toute la largeur disponible */
+  padding: 20px; /* Ajoutez du padding pour un meilleur rendu */
 }
 
 #todoCards {
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap; /* Permet aux cartes de se repositionner sur plusieurs lignes si nécessaire */
   justify-content: center;
   gap: 30px;
   margin-top: 30px;
@@ -25,6 +26,8 @@
   display: flex;
   flex-direction: column;
   position: relative; /* Pour permettre le positionnement absolu de .delBtn à l'intérieur de .task */
+  max-width: 300px; /* Définir une largeur maximale pour les cartes */
+  flex: 1 1 250px; /* Permettre aux cartes de s'adapter à l'espace disponible */
 }
 
 /* Icône poubelle */
@@ -38,7 +41,7 @@
 /* Zone de texte de la tâche */
 .task {
   resize: none;
-  min-width: 250px;
+  width: 100%; /* Assurez-vous que la zone de texte prend toute la largeur de la carte */
   height: 300px;
   position: relative; /* Positionner l'icône à l'intérieur de .task */
 }
@@ -50,4 +53,5 @@
   flex-direction: row;
   justify-content: center;
   cursor: pointer;
+  margin-top: 20px; /* Ajouter un peu d'espace au-dessus du bouton */
 }
