@@ -1,0 +1,53 @@
+/*********************GENERAL*****************************/
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/**********MAIN CONTENT************/
+
+#wrapper {
+  width: 50%;
+  margin-left: 20px;
+}
+
+#todoCards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.todoCard {
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Pour permettre le positionnement absolu de .delBtn à l'intérieur de .task */
+}
+
+/* Icône poubelle */
+.delBtn {
+  position: absolute; /* Position absolue pour la placer dans .task */
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Zone de texte de la tâche */
+.task {
+  resize: none;
+  min-width: 250px;
+  height: 300px;
+  position: relative; /* Positionner l'icône à l'intérieur de .task */
+}
+
+/* Bouton d'ajout de tâche */
+#btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  cursor: pointer;
+}
